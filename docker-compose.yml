@@ -1,6 +1,6 @@
 backend:
   container_name: tracks
-  image: jokogr/docker-tracks:latest
+  image: jokogr/tracks:latest
   environment:
     - TRACKS_SALT=addsomething
     - TRACKS_SECRET_TOKEN=newtoken
