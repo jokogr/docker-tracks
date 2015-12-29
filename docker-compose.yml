@@ -1,0 +1,9 @@
+backend:
+  container_name: tracks
+  image: jokogr/docker-tracks:latest
+  environment:
+    - TRACKS_SALT=addsomething
+    - TRACKS_SECRET_TOKEN=newtoken
+    - TRACKS_ADMIN_EMAIL=admin@mail
+  volumes:
+    - /srv/docker/tracks.db:/usr/local/share/tracks/db/tracks.db

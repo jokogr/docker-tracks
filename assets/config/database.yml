@@ -1,0 +1,5 @@
+production:
+  adapter: sqlite3
+  database: db/tracks.db
+  pool: 5
+  timeout: 5000
