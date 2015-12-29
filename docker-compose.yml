@@ -1,5 +1,4 @@
 backend:
-  container_name: tracks
   image: jokogr/tracks:latest
   environment:
     - TRACKS_SALT=addsomething
