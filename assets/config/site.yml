@@ -63,4 +63,4 @@ open_signups: false
 # on the signup page
 admin_email: {{TRACKS_ADMIN_EMAIL}}
 
-force_ssl: true
+force_ssl: {{TRACKS_FORCE_SSL}}
