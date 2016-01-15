@@ -1,6 +1,6 @@
 # This is the 'salt' to add to the password before it is encrypted
 # You need to change this to something unique for yourself
-salt: "{{TRACKS_SALT}}"
+salt: <%= ENV["TRACKS_SALT"] %>
 
 
 # NOTE: openid, ldap and cas are currently not supported anymore.
@@ -28,7 +28,7 @@ secure_cookies: true
 #
 #   SecureRandom.hex(64)
 #
-secret_token: "{{TRACKS_SECRET_TOKEN}}"
+secret_token: <%= ENV["TRACKS_SECRET_TOKEN"] %>
 
 
 # Uncomment if you want to dispatch todos that come from email based on the To: 
@@ -61,6 +61,6 @@ open_signups: false
 
 # change this to reflect the email address of the admin that you want to show 
 # on the signup page
-admin_email: {{TRACKS_ADMIN_EMAIL}}
+admin_email: <%= ENV["TRACKS_ADMIN_EMAIL"] %>
 
-force_ssl: {{TRACKS_FORCE_SSL}}
+force_ssl: <%= ENV["TRACKS_FORCE_SSL"] %>
