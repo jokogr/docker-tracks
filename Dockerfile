@@ -1,19 +1,17 @@
 FROM ubuntu:trusty-20151208
 MAINTAINER Ioannis Koutras <ioannis.koutras@gmail.com>
 
-ENV TRACKS_VERSION=2.3.0
-
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y wget ruby bundler \
-    sqlite3 libsqlite3-dev nginx supervisor \
+    zlib1g-dev sqlite3 libsqlite3-dev nginx supervisor \
  && rm -rf /var/lib/apt/lists/* \
  && rm /etc/nginx/sites-enabled/default
 
-RUN wget https://github.com/TracksApp/tracks/archive/v${TRACKS_VERSION}.tar.gz \
+RUN wget https://github.com/TracksApp/tracks/archive/master.tar.gz \
  && mkdir /usr/local/share/tracks \
- && tar xzf v${TRACKS_VERSION}.tar.gz --strip-components=1 -C \
+ && tar xzf master.tar.gz --strip-components=1 -C \
     /usr/local/share/tracks \
- && rm v${TRACKS_VERSION}.tar.gz
+ && rm master.tar.gz
 
 # Add puma gem, remove mysql2 gem and install all the gems
 RUN cd /usr/local/share/tracks \
