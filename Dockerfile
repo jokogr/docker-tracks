@@ -1,4 +1,4 @@
-FROM ubuntu:trusty-20151208
+FROM ubuntu:xenial-20160503
 MAINTAINER Ioannis Koutras <ioannis.koutras@gmail.com>
 
 RUN apt-get update \
