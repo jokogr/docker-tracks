@@ -3,7 +3,7 @@ MAINTAINER Ioannis Koutras <ioannis.koutras@gmail.com>
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y wget ruby bundler \
-    zlib1g-dev sqlite3 libsqlite3-dev nginx supervisor \
+    zlib1g-dev sqlite3 libsqlite3-dev nginx supervisor git \
  && rm -rf /var/lib/apt/lists/* \
  && rm /etc/nginx/sites-enabled/default
 
