@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20160706
+FROM ubuntu:xenial
 MAINTAINER Ioannis Koutras <ioannis.koutras@gmail.com>
 
 RUN apt-get update \
