@@ -16,6 +16,7 @@ RUN wget https://github.com/TracksApp/tracks/archive/master.tar.gz \
 # Add puma gem, remove mysql2 gem and install all the gems
 RUN cd /usr/local/share/tracks \
  && sed -ri "0,/source/ a\\\ngem 'puma'" Gemfile \
+ && sed -ri "0,/source/ a\\\ngem 'tzinfo-data'" Gemfile \
  && sed -ri "/gem \"mysql2\"/ s/^/#/" Gemfile \
  && bundle install
 
